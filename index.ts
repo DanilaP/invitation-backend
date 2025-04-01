@@ -1,6 +1,5 @@
 const cors = require('cors');
 const express = require('express');
-const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
 const http = require('http');
 const fs = require('fs');
@@ -11,7 +10,6 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({ origin: '*' }));
-mongoose.set('strictQuery', false);
 
 app.use(fileUpload());
 app.use(express.json());
